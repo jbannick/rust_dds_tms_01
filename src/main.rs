@@ -83,8 +83,8 @@ fn main() {
   info!("Created the Quality of Service");
   
   // Create the DDS Topic
-  let heartbeat_topic = domain_participant.create_topic("heartbeat_topic".to_string(), "Heartbeat".to_string(), &qos, TopicKind::NoKey).unwrap();
-  println!("DDS TMS TOPIC = {:?} {}", heartbeat_topic.name(),  heartbeat_topic.get_type().name()); 
+  let heartbeat_topic = domain_participant.create_topic("heartbeat_topic".to_string(), "TMS_Heartbeat".to_string(), &qos, TopicKind::NoKey).unwrap();
+  println!("DDS TMS TOPIC = {:?}", heartbeat_topic.get_type().name()); 
   debug!("{:?}", heartbeat_topic);
   
   // Create a DDS Subscriber 

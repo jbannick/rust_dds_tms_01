@@ -1,3 +1,4 @@
+#![allow(unused)]
 use std::{io, time};
 use std::fmt;
 
@@ -22,42 +23,6 @@ use uuid::Uuid;
 
 const SECOND: time::Duration = time::Duration::from_millis(1000);
 
-// const ONES: [&str; 20] = [
-//     "zero",
-//     "one",
-//     "two",
-//     "three",
-//     "four",
-//     "five",
-//     "six",
-//     "seven",
-//     "eight",
-//     "nine",
-//     "ten",
-//     "eleven",
-//     "twelve",
-//     "thirteen",
-//     "fourteen",
-//     "fifteen",
-//     "sixteen",
-//     "seventeen",
-//     "eighteen",
-//     "nineteen",
-// ];
-// const TENS: [&str; 10] = [
-//     "zero", "ten", "twenty", "thirty", "forty", "fifty", "sixty",
-//     "seventy", "eighty", "ninety",
-// ];
-// const ORDERS: [&str; 7] = [
-//     "zero",
-//     "thousand",
-//     "million",
-//     "billion",
-//     "trillion",
-//     "quadrillion",
-//     "quintillion", // enough for u64::MAX
-// ];
-
 #[derive(Debug, StructOpt)]
 struct Args {
     #[structopt(long, possible_values = ServerType::VARIANTS)]
@@ -81,13 +46,14 @@ impl fmt::Display for ServerType {
 }
 
 fn main() {
-  println!("== Starting Rust DDS TMS Heartbeat");
+  println!("===========================================================================");
+  println!("===                                                                     ===");
+  println!("===                    RUST DDS TMS SERVER 1.0                          ===");
+  println!("===                                                                     ===");
+  println!("===========================================================================");
   
   configure_logging();
   info!("Logging is configured");
-  
-    
-  warn!("DDS is not implemented for ipV6");
   
   let args = Args::from_args();
   debug!("{:?}", args);
@@ -97,21 +63,29 @@ fn main() {
   debug!("{:?}", arg);
     
   let server_type = arg.to_string();   
-  info!("server_type = {:?}", server_type);
+  debug!("server_type = {:?}", server_type);
   
   let my_device_uuid = Uuid::new_v4();
-  println!("TMS Device Id = {}", my_device_uuid.simple().to_string());
-  trace!("TMS Device Id = {}", my_device_uuid.simple().to_string());
+  println!("TMS DEVICE ID = {}", my_device_uuid.simple().to_string());
+
+  println!(""); // to visually separate ipV6 ERROR msgs
   
   // Create a DDS DomainParticipant
   let domain_participant = DomainParticipant::new(0).unwrap();
   info!("Created the DomainParticipant");
+
+  println!("");
   
   // Create a DDS Quality of Service
   let qos = QosPolicyBuilder::new()
     .reliability(policy::Reliability::Reliable {max_blocking_time: rustdds::Duration::ZERO})
     .build();
   info!("Created the Quality of Service");
+  
+  // Create the DDS Topic
+  let heartbeat_topic = domain_participant.create_topic("heartbeat_topic".to_string(), "Heartbeat".to_string(), &qos, TopicKind::NoKey).unwrap();
+  println!("DDS TMS TOPIC = {:?} {}", heartbeat_topic.name(),  heartbeat_topic.get_type().name()); 
+  debug!("{:?}", heartbeat_topic);
   
   // Create a DDS Subscriber 
   let tms_dashboard = domain_participant.create_subscriber(&qos).unwrap();
@@ -120,11 +94,6 @@ fn main() {
   // Create a DDS Publisher
   let tms_device = domain_participant.create_publisher(&qos).unwrap();
   info!("Created the DDS TMS Device");
-  
-  // Create the DDS Topic
-  let heartbeat_topic = domain_participant.create_topic("heartbeat_topic".to_string(), "Heartbeat".to_string(), &qos, TopicKind::NoKey).unwrap();
-  println!("DDS TMS Topic = {:?} {}", heartbeat_topic.name(),  heartbeat_topic.get_type().name()); 
-  debug!("{:?}", heartbeat_topic);
     
   #[derive(Serialize, Deserialize, Debug)]
   struct TmsHeartbeat {
@@ -135,7 +104,8 @@ fn main() {
   // ---
    
   if "sub" == server_type {
-  
+    println!("\nSTARTING TMS DASHBOARD - TMS deviceId = {:?}\n", my_device_uuid.simple().to_string());
+    
     let reader = tms_dashboard
     .create_datareader_no_key::<TmsHeartbeat, CDRDeserializerAdapter<TmsHeartbeat>>(
       &heartbeat_topic,
@@ -168,7 +138,7 @@ fn main() {
     })    
     
   } else if "pub" == server_type {
-  
+    println!("\nSTARTING TMS DEVICE - TMS deviceId = {:?}\n", my_device_uuid.simple().to_string());
     let  writer = tms_device
     .create_datawriter_no_key::<TmsHeartbeat, CDRSerializerAdapter<TmsHeartbeat>> (
       &heartbeat_topic,
@@ -230,36 +200,3 @@ fn configure_logging() {
     }
   });
 }
-
-// // See: https://stackoverflow.com/questions/61603849/how-to-transform-a-rust-number-into-english-words-like-1-one
-// pub fn encode(num: u32) -> String {
-//     match num {
-//         0..=19 => ONES[num as usize].to_string(),
-//         20..=99 => {
-//             let upper = (num / 10) as usize;
-//             match num % 10 {
-//                 0 => TENS[upper].to_string(),
-//                 lower => format!("{}-{}", TENS[upper], encode(lower)),
-//             }
-//         }
-//         100..=999 => format_num(num, 100, "hundred"),
-//         _ => {
-//             let (div, order) =
-//                 successors(Some(1u32), |v| v.checked_mul(1000))
-//                     .zip(ORDERS.iter())
-//                     .find(|&(e, _)| e > num / 1000)
-//                     .unwrap();
-// 
-//             format_num(num, div, order)
-//         }
-//     }
-// }
-// 
-// fn format_num(num: u32, div: u32, order: &str) -> String {
-//     match (num / div, num % div) {
-//         (upper, 0) => format!("{} {}", encode(upper), order),
-//         (upper, lower) => {
-//             format!("{} {} {}", encode(upper), order, encode(lower))
-//         }
-//     }
-// }

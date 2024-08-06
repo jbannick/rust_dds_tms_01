@@ -1,5 +1,5 @@
 # rust_dds_tms_01
-This app is a prototype Tactical Microgrid System implementation written in Rust.  
+This app is a prototype Tactical Microgrid Standard implementation written in Rust.  
 
 It publishes TMS Heartbeats from a TMS-enabled Device, such as a Generator (genset)  
 and receives those messages at a TMS-enabled Dashboard.  

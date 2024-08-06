@@ -4,7 +4,7 @@ This app is a prototype Tactical Microgrid Standard implementation written in Ru
 It publishes TMS Heartbeats from a TMS-enabled Device, such as a Generator (genset)  
 and receives those messages at a TMS-enabled Dashboard.  
 
-It uses an Object Management Group, Data Distribution Service library implemented  
+It uses an Object Management Group, Data Distribution Service open source library implemented  
 in pure Rust (no C or C++) by Atostek Oy, a Finnish company.  
 See: https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=285095  
 See: https://www.omg.org/omg-dds-portal/  

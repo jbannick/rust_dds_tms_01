@@ -18,7 +18,7 @@ How to run:
 On your Linux, Windows, or MacOS computer  
 In Terminal Window One  
 
-Step 1. Go to the directory containing the Cargo.toml file for this app. 
+Step 1. Go to the directory containing the Cargo.toml file for this app.  
 Step 2. Execute: cargo run -- --servertype sub  
         Should start this app as a TMS Subscriber and wait for connections  
  

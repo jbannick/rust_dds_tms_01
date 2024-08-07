@@ -102,11 +102,6 @@ impl fmt::Display for ServerType {
 }
 
 fn main() {
-  println!("===========================================================================");
-  println!("===                                                                     ===");
-  println!("===                    RUST DDS TMS SERVER 1.0                          ===");
-  println!("===                                                                     ===");
-  println!("===========================================================================");
   
   configure_logging();
   info!("Logging is configured");
@@ -122,8 +117,39 @@ fn main() {
   debug!("server_type = {:?}", server_type);
   
   let my_device_uuid = Uuid::new_v4();
-  println!("TMS DEVICE ID = {}", my_device_uuid.simple().to_string());
+  debug!("TMS DEVICE ID = {}", my_device_uuid.simple().to_string());
 
+  // Display the banner
+  
+  let endline = format!("{:=<78}", "");
+  println!("{}", endline);
+    
+  let earsline = format!("{:=<4}{:^70}{:=<4}", "", "", "");
+  println!("{}", earsline);
+  
+  if "sub" == server_type {
+    let banner = "Rust DDS TMS Dashboard";
+    let bannerline = format!("{:=<4}{:^70}{:=<4}", "", banner, "");
+  println!("{}", bannerline);
+  } else if "pub" == server_type {
+    let banner = "Rust DDS TMS Device";
+    let bannerline = format!("{:=<4}{:^70}{:=<4}", "", banner, "");
+    println!("{}", bannerline);
+  } else {
+    error!("Invalid argument: {:?}", server_type);
+    return;
+  }
+  
+  let device_id = format!("TMS deviceId {}",  my_device_uuid.simple().to_string());
+  let deviceline = format!("{:=<4}{:^70}{:=<4}", "", device_id, "");
+  println!("{}", deviceline);
+    
+  println!("{}", earsline);
+
+  println!("{}", endline);
+
+  // End banner display
+  
   println!(""); // to visually separate ipV6 ERROR msgs
   
   // Create a DDS DomainParticipant

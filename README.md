@@ -16,6 +16,8 @@ See: https://github.com/jhelovuo/RustDDS
 Usage:  
   cargo run -- --servertype [pub | sub]  
 
+Note: The extra `--` are required by Cargo to parse the app's arguments.  
+
 How to run:  
  
 On your Linux, Windows, or MacOS computer  

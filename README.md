@@ -4,8 +4,7 @@ This app is a prototype Tactical Microgrid Standard (**TMS**) implementation wri
 TMS enables interoperability of hardware and software necessary to operate an electrical generation and distribution microgrid.  
 TMS was developed for military use on the battlefield, but could be applied to civilian electric grids as well.
 
-This prototype publishes TMS Heartbeats from a TMS-enabled Device, such as a Generator (genset)  
-and receives those messages at a TMS-enabled Dashboard. All messaging is via localhost.
+This prototype publishes TMS Heartbeats from a TMS-enabled Device, such as a Generator (genset) and receives those messages at a TMS-enabled Dashboard. All messaging is via localhost.
 
 This app uses an Object Management Group (**OMG**) , Data Distribution Service (**DDS**) open source library implemented in pure Rust (no C or C++) by Atostek Oy, a Finnish company.  
 

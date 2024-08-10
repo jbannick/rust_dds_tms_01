@@ -29,7 +29,7 @@ Step 2. Execute: `cargo run -- --servertype sub`
  
 In Terminal Window Two  
  
-Step 3. Repeat Steps 1. 2 above except execute: `cargo run -- --servertype **pub**`  
+Step 3. Repeat Steps 1. 2 above except execute: `cargo run -- --servertype` **pub**    
         Should start this app as a TMS Publisher, connect to all Subscribers,  
         and begin publishing TMS Heartbeat messages one per second.  
         All TMS Subscribers should receive and display those messages.  

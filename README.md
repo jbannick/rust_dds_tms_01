@@ -14,7 +14,7 @@ See: https://www.omg.org/omg-dds-portal/
 See: https://github.com/jhelovuo/RustDDS  
 
 Usage:  
-  cargo run -- --servertype [pub | sub]  
+  `cargo run -- --servertype [pub | sub]`  
 
 Note: The extra `--` are required by Cargo to parse the app's arguments.  
 
@@ -24,7 +24,7 @@ On your Linux, Windows, or MacOS computer
 In Terminal Window One  
 
 Step 1. Go to the directory containing the Cargo.toml file for this app.  
-Step 2. Execute: cargo run -- --servertype sub  
+Step 2. Execute: `cargo run -- --servertype sub`  
         Should start this app as a TMS Subscriber and wait for connections  
  
 In Terminal Window Two  

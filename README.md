@@ -9,9 +9,13 @@ and receives those messages at a TMS-enabled Dashboard.
 
 This app uses an Object Management Group (**OMG**) , Data Distribution Service (**DDS**) open source library implemented  
 in pure Rust (no C or C++) by Atostek Oy, a Finnish company.  
+
+The advantage of using Rust is that Rust provides greater protections from cyber-attack than other common programming languages.  
+
 See: https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=285095  
 See: https://www.omg.org/omg-dds-portal/  
 See: https://github.com/jhelovuo/RustDDS  
+See: https://insights.sei.cmu.edu/blog/rust-software-security-a-current-state-assessment/  
 
 Usage:  
   `cargo run -- --servertype [pub | sub]`  

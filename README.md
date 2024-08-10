@@ -7,8 +7,7 @@ TMS was developed for military use on the battlefield, but could be applied to c
 This prototype publishes TMS Heartbeats from a TMS-enabled Device, such as a Generator (genset)  
 and receives those messages at a TMS-enabled Dashboard. All messaging is via localhost.
 
-This app uses an Object Management Group (**OMG**) , Data Distribution Service (**DDS**) open source library implemented  
-in pure Rust (no C or C++) by Atostek Oy, a Finnish company.  
+This app uses an Object Management Group (**OMG**) , Data Distribution Service (**DDS**) open source library implemented in pure Rust (no C or C++) by Atostek Oy, a Finnish company.  
 
 The advantage of using Rust is that Rust provides greater protections from cyber-attack than other common programming languages.  
 

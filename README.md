@@ -92,6 +92,10 @@ This app has been tested on:
 * Windows 11 86x64 Intel i9  
 * MacOS 13 Intel i5
 
+Note: The startup message:  
+"rustdds::network::udp_listener - UDPListener::new_multicast() not implemented for IpV6"  
+is not a failure condition. It simply notifies that this implementation of DDS does not support ipV6.  
+
 ### Beyond:  
 
 This is a "Hello World!" app for TMS in Rust.  

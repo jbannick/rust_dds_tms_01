@@ -1,4 +1,4 @@
-# rust_dds_tms_01
+# Tactical Microgrid Prototype in Rust
 This app is a prototype Tactical Microgrid Standard (**TMS**) implementation written in Rust.  
 
 TMS enables interoperability of hardware and software necessary to operate an electrical generation and distribution microgrid.  

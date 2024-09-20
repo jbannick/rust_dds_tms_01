@@ -75,6 +75,13 @@ All TMS Subscribers should receive and display those messages.
 * You can stop and restart Publishers and Subscribers.  
 * You can start and stop Publishers and Subscribers in any order.  
 
+### Validation:
+This app has been tested on:
+
+* Linux: Ubuntu 22.04 86x64  
+* Windows 11 86x64 Intel i9  
+* MacOS 13 Intel i5
+
 ### Beyond:  
 
 This is a "Hello World!" app for TMS in Rust.  

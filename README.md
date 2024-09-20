@@ -8,7 +8,7 @@ TMS was developed for military use on the battlefield, but could be applied to c
 
 This prototype publishes TMS Heartbeats from a TMS-enabled Device, such as a Generator (genset) and receives those messages at a subscribing TMS-enabled Dashboard. All messaging is via localhost. Messages are published to the `TMS_Heartbeat` DDS topic.
 
-This app uses an Object Management Group (**OMG**) , Data Distribution Service (**DDS**) open source library implemented in pure Rust (no C or C++) by Atostek Oy, a Finnish company.  
+This app uses an Object Management Group (**OMG**) , Data Distribution Service (**DDS**) open source library implemented in pure Rust (no C or C++) by **Atostek Oy**, a Finnish company.  
 
 The advantage of using Rust is that Rust provides greater protections from cyber-attack than other common programming languages.  
 
@@ -22,18 +22,40 @@ Usage:
 
 Note: The extra `--` are required by Cargo to parse the app's arguments.  
 
-How to run:  
+### Before you run this app:
+
+Step 1. Install Rust on your computer.  
+See: https://www.rust-lang.org/tools/install.  
+
+Step 2. Install Git to your computer.  
+See: https://www.rust-lang.org/tools/install
+
+Step 3. On your computer, create a working direcory.  
+
+Step 4. CD to that working directory.  
+
+Step 5. Clone this repo to that working directory.
+
+git clone https://github.com/jbannick/rust_dds_tms_01.git. 
+
+### How to run this app:  
  
 On your Linux, Windows, or MacOS computer  
-In Terminal Window One  
 
-Step 1. Go to the directory containing the `Cargo.toml` file for this app.  
-Step 2. Execute: `cargo run -- --servertype sub`  
+Step 1. Open and go to Terminal Window One  
+
+Step 2. In Terminal Window One: 
+
+Go to the directory containing the `Cargo.toml` file for this app. 
+  
+Step 3. Execute: `cargo run -- --servertype sub`  
         Should start this app as a TMS Subscriber and wait for connections  
+
+Step 4. Open and go to Terminal Window Two  
  
-In Terminal Window Two  
- 
-Step 3. Repeat Steps 1. 2 above except execute: `cargo run -- --servertype` **pub**    
+Step 5. In Terminal Window Two  
+
+Repeat Steps 1. 2 above except execute: `cargo run -- --servertype` **pub**    
         Should start this app as a TMS Publisher, connect to all Subscribers,  
         and begin publishing TMS Heartbeat messages one per second.  
         All TMS Subscribers should receive and display those messages.  

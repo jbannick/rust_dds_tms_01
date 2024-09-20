@@ -12,7 +12,7 @@ This app uses an Object Management Group (**OMG**) , Data Distribution Service (
 
 The advantage of using Rust is that Rust provides greater protections from cyber-attack than other common programming languages.  
 
-MIL-STD-3071 Tactical Microgrid Communications and Control: 
+MIL-STD-3071 Tactical Microgrid Communications and Control:  
 See: https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=285095  
 
 OMG Data Distribution Service Portal:  

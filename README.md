@@ -2,6 +2,7 @@
 This app is a prototype Tactical Microgrid Standard (**TMS**) implementation written in Rust.  
 
 TMS enables interoperability of hardware and software necessary to operate an electrical generation and distribution microgrid.  
+
 TMS was developed for military use on the battlefield, but could be applied to civilian electric grids as well.  
 
 

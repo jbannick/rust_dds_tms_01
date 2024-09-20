@@ -74,3 +74,11 @@ All TMS Subscribers should receive and display those messages.
 * You can have multiple Publishers and multiple Subscribers, one Terminal window each.  
 * You can stop and restart Publishers and Subscribers.  
 * You can start and stop Publishers and Subscribers in any order.  
+
+### Beyond:  
+
+This is a "Hello World!" app for TMS in Rust.  
+
+TMS includes almost 200 objects.  
+
+To fully implement a TMS microgrid would be a non-trivial task.

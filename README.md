@@ -58,6 +58,8 @@ cargo build
 You should see cargo downloading its dependencies and building the app.  
 
 ### How to run this app:  
+
+Note: This single app runs as either a Publisher or Subscriber server.  You run it in two Terminal Windows on the same computer.  
  
 On your Linux, Windows, or MacOS computer  
 

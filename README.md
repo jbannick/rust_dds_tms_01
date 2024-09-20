@@ -2,7 +2,8 @@
 This app is a prototype Tactical Microgrid Standard (**TMS**) implementation written in Rust.  
 
 TMS enables interoperability of hardware and software necessary to operate an electrical generation and distribution microgrid.  
-TMS was developed for military use on the battlefield, but could be applied to civilian electric grids as well.
+TMS was developed for military use on the battlefield, but could be applied to civilian electric grids as well.  
+
 
 This prototype publishes TMS Heartbeats from a TMS-enabled Device, such as a Generator (genset) and receives those messages at a subscribing TMS-enabled Dashboard. All messaging is via localhost. Messages are published to the `TMS_Heartbeat` DDS topic.
 

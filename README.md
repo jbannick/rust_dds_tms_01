@@ -72,12 +72,16 @@ Go to the directory containing the `Cargo.toml` file for this app.
 Step 3. Execute: `cargo run -- --servertype sub`  
         Should start this app as a TMS Subscriber and wait for connections  
 
+!["Subscriber Server"](TmsServerSub.png)
+
 Step 4. Open and go to Terminal Window Two  
- 
+
 Step 5. In Terminal Window Two  
 
 Repeat Steps 1. 2 above except execute: `cargo run -- --servertype` **pub**    
 Should start this app as a TMS Publisher, connect to all Subscribers, and begin publishing TMS Heartbeat messages one per second.  
+        
+![](TmsServerPub.png)        
         
 All TMS Subscribers should receive and display those messages.  
 

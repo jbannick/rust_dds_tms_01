@@ -33,10 +33,11 @@ See: https://git-scm.com/downloads
 
 Step 3. On your computer, create a working direcory.  
 
-Step 4. CD to that working directory.  
+Step 4. In a Terminal Window, CD to that working directory.  
 
 Step 5. Clone this repo to that working directory.
 
+Enter on the command line:  
 git clone https://github.com/jbannick/rust_dds_tms_01.git. 
 
 ### How to run this app:  
@@ -57,10 +58,10 @@ Step 4. Open and go to Terminal Window Two
 Step 5. In Terminal Window Two  
 
 Repeat Steps 1. 2 above except execute: `cargo run -- --servertype` **pub**    
-        Should start this app as a TMS Publisher, connect to all Subscribers,  
-        and begin publishing TMS Heartbeat messages one per second.  
-        All TMS Subscribers should receive and display those messages.  
+Should start this app as a TMS Publisher, connect to all Subscribers, and begin publishing TMS Heartbeat messages one per second.  
+        
+All TMS Subscribers should receive and display those messages.  
 
-You can have multiple Publishers and multiple Subscribers, one Terminal window each.  
-You can stop and restart Publishers and Subscribers.  
-You can start and stop Publishers and Subscribers in any order.  
+* You can have multiple Publishers and multiple Subscribers, one Terminal window each.  
+* You can stop and restart Publishers and Subscribers.  
+* You can start and stop Publishers and Subscribers in any order.  

@@ -23,6 +23,7 @@ Usage:
 Note: The extra `--` are required by Cargo to parse the app's arguments.  
 
 ### Before you run this app:
+On your Linux, Windows, or MacOS computer  
 
 Step 1. Install Rust on your computer.  
 See: https://www.rust-lang.org/tools/install.  

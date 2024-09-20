@@ -79,6 +79,16 @@ All TMS Subscribers should receive and display those messages.
 
 This is a "Hello World!" app for TMS in Rust.  
 
+It proves that a pure Rust implementation can be done.  
+
+It provides a starting place for further development.  
+
+It does not implement DDS features that are available in the Rust DDS implementation, inclding:  
+* Message encryption  
+* Signed DDS configuration files  
+* Quality of service parameters  
+* Communication outside of localhost  
+
 TMS includes almost 200 objects.  
 
-To fully implement a TMS microgrid would be a non-trivial task.
+MIL-STD-3071 contains an Appendix that defines each of those objects, and their interactions, in a manner and in detail sufficient to build a production TMS microgrid.

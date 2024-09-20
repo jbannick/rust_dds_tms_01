@@ -72,6 +72,8 @@ Go to the directory containing the `Cargo.toml` file for this app.
 Step 3. Execute: `cargo run -- --servertype sub`  
         Should start this app as a TMS Subscriber and wait for connections  
 
+![Subscruber](TmsServerSub.png "Subscrber")
+
 Step 4. Open and go to Terminal Window Two  
  
 Step 5. In Terminal Window Two  

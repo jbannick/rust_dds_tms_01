@@ -5,22 +5,20 @@ TMS enables interoperability of hardware and software necessary to operate an el
 
 TMS was developed for military use on the battlefield, but could be applied to civilian electric grids as well.  
 
-See: MIL-STD-3071 Tactical Microgrid Communications and Control:  https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=285095  
+See: **[MIL-STD-3071 Tactical Microgrid Communications and Control](https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=285095)**
 
 This prototype publishes TMS Heartbeats from a TMS-enabled Device, such as a Generator (genset) and receives those messages at a subscribing TMS-enabled Dashboard. All messaging is via localhost. Messages are published to the `TMS_Heartbeat` DDS topic.
 
 This app uses an Object Management Group (**OMG**) , Data Distribution Service (**DDS**) open source library implemented in pure Rust (no C or C++) by **[Atostek Oy](https://atostek.com/en/company/#yhteys)**, a Finnish company.  
 
-See: OMG Data Distribution Service Portal: https://www.omg.org/omg-dds-portal/  
+See: **[OMG Data Distribution Service Portal](https://www.omg.org/omg-dds-portal/)**  
 
 
-See: GitHub repo for RustDDS implementation:  
-https://github.com/jhelovuo/RustDDS 
+See: **[GitHub repo for RustDDS implementation](https://github.com/jhelovuo/RustDDS)** 
 
 The advantage of using Rust is that Rust provides greater protections from cyber-attack than other common programming languages.  
 
-See: Rust Software Security: A Current State Assessment. Carnegie Mellon University, 2022.  
-https://insights.sei.cmu.edu/blog/rust-software-security-a-current-state-assessment/  
+See: **[Rust Software Security: A Current State Assessment. Carnegie Mellon University, 2022](https://insights.sei.cmu.edu/blog/rust-software-security-a-current-state-assessment/)**  
 
 Usage:  
   `cargo run -- --servertype [pub | sub]`  

@@ -5,26 +5,22 @@ TMS enables interoperability of hardware and software necessary to operate an el
 
 TMS was developed for military use on the battlefield, but could be applied to civilian electric grids as well.  
 
+See: MIL-STD-3071 Tactical Microgrid Communications and Control:  https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=285095  
 
 This prototype publishes TMS Heartbeats from a TMS-enabled Device, such as a Generator (genset) and receives those messages at a subscribing TMS-enabled Dashboard. All messaging is via localhost. Messages are published to the `TMS_Heartbeat` DDS topic.
 
 This app uses an Object Management Group (**OMG**) , Data Distribution Service (**DDS**) open source library implemented in pure Rust (no C or C++) by **[Atostek Oy](https://atostek.com/en/company/#yhteys)**, a Finnish company.  
 
+See: OMG Data Distribution Service Portal: https://www.omg.org/omg-dds-portal/  
+
+
+See: GitHub repo for RustDDS implementation:  
+https://github.com/jhelovuo/RustDDS 
+
 The advantage of using Rust is that Rust provides greater protections from cyber-attack than other common programming languages.  
 
-MIL-STD-3071 Tactical Microgrid Communications and Control:  
-See: https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=285095  
-
-OMG Data Distribution Service Portal:  
-See: https://www.omg.org/omg-dds-portal/  
-
-GitHub repo for RustDDS implementation:  
-See: https://github.com/jhelovuo/RustDDS  
-
-Rust Software Security: A Current State Assessment. 
-Carnegie Mellon University 
-2022.  
-See: https://insights.sei.cmu.edu/blog/rust-software-security-a-current-state-assessment/  
+See: Rust Software Security: A Current State Assessment. Carnegie Mellon University, 2022.  
+https://insights.sei.cmu.edu/blog/rust-software-security-a-current-state-assessment/  
 
 Usage:  
   `cargo run -- --servertype [pub | sub]`  
@@ -40,7 +36,7 @@ See: https://www.rust-lang.org/tools/install.
 Step 2. Install Git to your computer.  
 See: https://git-scm.com/downloads
 
-Step 3. On your computer, create a working direcory.  
+Step 3. On your computer, create a working directory.  
 
 Step 4. In a Terminal Window, CD to that working directory.  
 
@@ -72,7 +68,7 @@ Go to the directory containing the `Cargo.toml` file for this app.
 Step 3. Execute: `cargo run -- --servertype sub`  
         Should start this app as a TMS Subscriber and wait for connections  
 
-![Subscruber](TmsServerSub.png "Subscrber")
+![Subscriber](TmsServerSub.png "Subscrber")
 
 Step 4. Open and go to Terminal Window Two  
 
@@ -104,7 +100,7 @@ It proves that a pure Rust implementation can be done.
 
 It provides a starting place for further development.  
 
-It does not implement DDS features that are available in the Rust DDS implementation, inclding:  
+It does not implement DDS features that are available in the Rust DDS implementation, including:  
 * Message encryption  
 * Signed DDS configuration files  
 * Quality of service parameters  

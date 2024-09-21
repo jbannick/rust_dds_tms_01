@@ -47,7 +47,7 @@ Step 6. Build the app.
 
 In the same directory as the cargo.toml file:  
 Enter:  
-cargo build  
+`cargo build`  
 
 You should see cargo downloading its dependencies and building the app.  
 

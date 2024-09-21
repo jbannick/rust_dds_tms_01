@@ -41,7 +41,7 @@ Step 4. In a Terminal Window, CD to that working directory.
 Step 5. Clone this repo to that working directory.
 
 Enter on the command line:  
-git clone https://github.com/jbannick/rust_dds_tms_01.git  
+`git clone https://github.com/jbannick/rust_dds_tms_01.git`  
 
 Step 6. Build the app. 
 

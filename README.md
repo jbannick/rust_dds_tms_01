@@ -68,7 +68,7 @@ Go to the directory containing the `Cargo.toml` file for this app.
 Step 3. Execute: `cargo run -- --servertype sub`  
         Should start this app as a TMS Subscriber and wait for connections  
 
-![Subscriber](TmsServerSub.png "Subscrber")
+![Subscriber](TmsServerSub.png "Subscriber")
 
 Step 4. Open and go to Terminal Window Two  
 
@@ -91,6 +91,10 @@ This app has been tested on:
 * Linux: Ubuntu 22.04 86x64  
 * Windows 11 86x64 Intel i9  
 * MacOS 13 Intel i5
+
+Note: The startup message:  
+"rustdds::network::udp_listener - UDPListener::new_multicast() not implemented for IpV6"  
+is not a failure condition. It simply notifies that this implementation of DDS does not support ipV6.
 
 ### Beyond:  
 

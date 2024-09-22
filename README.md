@@ -84,12 +84,11 @@ Should start this app as a TMS Publisher, connect to all Subscribers, and begin 
 
 ![Publisher](TmsServerPub.png "Publisher")        
         
-All TMS Subscribers should receive and display those messages.  
-
 * You can have multiple Publishers and multiple Subscribers, one Terminal window each.  
 * You can stop and restart Publishers and Subscribers.  
 * You can start and stop Publishers and Subscribers in any order.  
 
+All TMS Dashboards should receive and display TMS Heartbeats from all TMS publishing Devices. 
 ### Validation:
 This app has been tested on:
 

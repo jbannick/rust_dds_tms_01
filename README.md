@@ -107,7 +107,7 @@ It does not implement major DDS features available in the Rust DDS implementatio
 
 It does:
 
-* Prove that a pure Rust implementation can be done  
+* Prove that a pure Rust TMS can be implemented  
 * Provide a template for further development  
 
 TMS includes almost 200 objects.  

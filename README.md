@@ -100,7 +100,7 @@ This is a "Hello World!" app for TMS in Rust.
 
 It proves that a pure Rust implementation can be done.  
 
-It provides a starting place for further development.  
+It provides a template for further development.  
 
 It does not implement DDS features that are available in the Rust DDS implementation, including:  
 * Message encryption  

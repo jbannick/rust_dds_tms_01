@@ -31,7 +31,7 @@ On your Linux, Windows, or MacOS computer
 Step 1. Install Rust on your computer.  
 See: https://www.rust-lang.org/tools/install.  
 
-Step 2. Install Git to your computer.  
+Step 2. Install Git on your computer.  
 See: https://git-scm.com/downloads
 
 Step 3. On your computer, create a working directory.  

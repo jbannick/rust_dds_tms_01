@@ -98,15 +98,17 @@ is not a failure condition. It simply notifies that this implementation of DDS d
 
 This is a "Hello World!" app for TMS in Rust.  
 
-It proves that a pure Rust implementation can be done.  
+It does not implement major DDS features available in the Rust DDS implementation, including:  
 
-It provides a template for further development.  
-
-It does not implement DDS features that are available in the Rust DDS implementation, including:  
 * Message encryption  
 * Signed DDS configuration files  
 * Quality of service parameters  
 * Communication outside of localhost  
+
+It does:
+
+* Prove that a pure Rust implementation can be done  
+* Provide a template for further development  
 
 TMS includes almost 200 objects.  
 
